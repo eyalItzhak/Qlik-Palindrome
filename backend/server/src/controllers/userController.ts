@@ -27,14 +27,6 @@ const signIn = async (req: Request, res: Response) => {
     res.status(200).send(user);
 }
 
-// const getUserByFilters  = async (req: Request, res: Response) => {
-//     const params : FindUsersByDTO =  req.query; 
-//     const user = await usersService.findFirstUserByFilters(params);
-//     if (!user) {
-//         throw new InternalServerError("an error occurred while fetching the user");
-//     }
-//     res.status(200).send(user);
-// }
 
 const getUsers  = async (req: Request, res: Response) => {
     const params :FindUsersByDTO =  req.query; 
@@ -46,7 +38,8 @@ const getUsers  = async (req: Request, res: Response) => {
 }
 
 const howAmI = (req: Request, res: Response) => {
-    console.log("currentPorcess", process.env.HOSTNAME || 'unknown');
+   //if you want to see porcess name (we have 3)
+   // console.log("currentPorcess", process.env.HOSTNAME || 'unknown'); 
     res.status(200).send({ currentUser: req.currentUser || null });
   
 }
