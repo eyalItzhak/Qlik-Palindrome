@@ -8,7 +8,6 @@ import { NotFoundResourceError } from '../errors/not-found-resource';
 import { NotAuthorizedError } from '../errors/not-authorized-error';
 import { GetAllMessagesDTO, GetMyMessagesDTO, UpdateMessageDTO } from '../types/dtos/messageDTOs';
 
-
 const postMessage = async (req: Request, res: Response) => {
     const { messageContent } = req.body;
     const msg = await massageService.saveMassage({ content: messageContent, senderId: req.currentUser!.id })
