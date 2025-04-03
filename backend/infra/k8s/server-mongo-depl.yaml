@@ -1,0 +1,61 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: server-mongo-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: server-mongo
+  template:
+    metadata:
+      labels:
+        app: server-mongo
+    spec:
+      containers:
+        - name: server-mongo
+          image: mongo
+          ports:
+            - containerPort: 27017
+          volumeMounts:
+            - name: mongo-storage
+              mountPath: /data/db  # This is where MongoDB stores its data
+      volumes:
+        - name: mongo-storage
+          persistentVolumeClaim:
+            claimName: mongo-pvc
+            
+--- # It exposes ip internally to the cluster, so that other pods can access it.
+apiVersion: v1
+kind: Service
+metadata:
+  name: server-mongo-srv
+spec:
+  selector:
+    app: server-mongo
+  ports:
+    - name: db
+      protocol: TCP
+      port: 27017
+      targetPort: 27017
+
+#### This is a NodePort service, which exposes Ip outside the cluster to access mongoDB data.
+--- # need to remove from production , or at least protect with a password
+apiVersion: v1
+kind: Service
+metadata:
+  name: server-mongo-srv
+spec:
+  type: NodePort
+  selector:
+    app: server-mongo
+  ports:
+    - name: db
+      protocol: TCP
+      port: 27017
+      targetPort: 27017
+      nodePort: 30017  # Pick a value between 30000-32767
+
+
+
+
