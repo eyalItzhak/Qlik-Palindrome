@@ -20,7 +20,7 @@ it("shold create msg for user", async () => {
     await request(app).post("/api/messages/postMessage").set("Cookie", user_1).send({
         messageContent: "test message 1"
     }).expect(201)
-    const foundMessage = await request(app).get(`/api/messages/getMyMessage`).set("Cookie", user_1).send().expect(404)
+    const foundMessage = await request(app).get(`/api/messages/getMyMessage`).set("Cookie", user_1).send().expect(200)
     expect(foundMessage.body.totalItems).toBeGreaterThan(0)
 })
 
