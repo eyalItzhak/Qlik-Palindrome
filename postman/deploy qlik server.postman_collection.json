@@ -1,10 +1,10 @@
 {
 	"info": {
-		"_postman_id": "2f2d55ec-0db3-4de3-88ef-9974ff5a9592",
-		"name": "New Collection",
+		"_postman_id": "fd507615-3985-482a-b1e9-8b00642b595b",
+		"name": "deploy qlik server",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "24976132",
-		"_collection_link": "https://planetary-equinox-396146.postman.co/workspace/Qlik-Server-API~48e01c3a-5f7b-4388-a71b-86a5dd5665e3/collection/24976132-2f2d55ec-0db3-4de3-88ef-9974ff5a9592?action=share&source=collection_link&creator=24976132"
+		"_collection_link": "https://planetary-equinox-396146.postman.co/workspace/Qlik-Server-API~48e01c3a-5f7b-4388-a71b-86a5dd5665e3/collection/24976132-fd507615-3985-482a-b1e9-8b00642b595b?action=share&source=collection_link&creator=24976132"
 	},
 	"item": [
 		{
@@ -17,7 +17,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n     \"email\": \"user5@gmail.com\",\r\n     \"password\" : \"abc123\"\r\n}",
+							"raw": "{\r\n     \"email\": \"user1@gmail.com\",\r\n     \"password\" : \"abc123\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -25,11 +25,12 @@
 							}
 						},
 						"url": {
-							"raw": "https://qlikserver.dev/api/users/signup",
+							"raw": "https://qlik-palindrome.onrender.com/api/users/signup",
 							"protocol": "https",
 							"host": [
-								"qlikserver",
-								"dev"
+								"qlik-palindrome",
+								"onrender",
+								"com"
 							],
 							"path": [
 								"api",
@@ -47,7 +48,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n     \"email\": \"user2@gmail.com\",\r\n     \"password\" : \"abc123\"\r\n}",
+							"raw": "{\r\n     \"email\": \"user1@gmail.com\",\r\n     \"password\" : \"abc123\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -55,11 +56,12 @@
 							}
 						},
 						"url": {
-							"raw": "https://qlikserver.dev/api/users/signin",
+							"raw": "https://qlik-palindrome.onrender.com/api/users/signin",
 							"protocol": "https",
 							"host": [
-								"qlikserver",
-								"dev"
+								"qlik-palindrome",
+								"onrender",
+								"com"
 							],
 							"path": [
 								"api",
@@ -88,11 +90,12 @@
 							}
 						},
 						"url": {
-							"raw": "https://qlikserver.dev/api/users/getUsersByFilter",
+							"raw": "https://qlik-palindrome.onrender.com/api/users/getUsersByFilter",
 							"protocol": "https",
 							"host": [
-								"qlikserver",
-								"dev"
+								"qlik-palindrome",
+								"onrender",
+								"com"
 							],
 							"path": [
 								"api",
@@ -102,27 +105,27 @@
 							"query": [
 								{
 									"key": "email",
-									"value": "user_10@abc.com",
+									"value": "user2@gmail.com",
 									"disabled": true
 								},
 								{
 									"key": "permission",
-									"value": "USER",
+									"value": "ADMIN",
 									"disabled": true
 								},
 								{
 									"key": "id",
-									"value": "67eea96c89fe37a1f785543a",
+									"value": "67eea96589fe37a1f7855434",
 									"disabled": true
 								},
 								{
 									"key": "page",
-									"value": "1",
+									"value": "3",
 									"disabled": true
 								},
 								{
 									"key": "limit",
-									"value": "4",
+									"value": "2",
 									"disabled": true
 								}
 							]
@@ -143,11 +146,12 @@
 							"formdata": []
 						},
 						"url": {
-							"raw": "https://qlikserver.dev/api/users/currentuser",
+							"raw": "https://qlik-palindrome.onrender.com/api/users/currentuser",
 							"protocol": "https",
 							"host": [
-								"qlikserver",
-								"dev"
+								"qlik-palindrome",
+								"onrender",
+								"com"
 							],
 							"path": [
 								"api",
@@ -173,11 +177,12 @@
 							}
 						},
 						"url": {
-							"raw": "https://qlikserver.dev/api/users/logout",
+							"raw": "https://qlik-palindrome.onrender.com/api/users/logout",
 							"protocol": "https",
 							"host": [
-								"qlikserver",
-								"dev"
+								"qlik-palindrome",
+								"onrender",
+								"com"
 							],
 							"path": [
 								"api",
@@ -203,11 +208,12 @@
 							}
 						},
 						"url": {
-							"raw": "https://qlikserver.dev/api/users/deleteUser",
+							"raw": "https://qlik-palindrome.onrender.com/api/users/deleteUser",
 							"protocol": "https",
 							"host": [
-								"qlikserver",
-								"dev"
+								"qlik-palindrome",
+								"onrender",
+								"com"
 							],
 							"path": [
 								"api",
@@ -238,11 +244,12 @@
 							}
 						},
 						"url": {
-							"raw": "https://qlikserver.dev/api/messages/postMessage",
+							"raw": "https://qlik-palindrome.onrender.com/api/messages/postMessage",
 							"protocol": "https",
 							"host": [
-								"qlikserver",
-								"dev"
+								"qlik-palindrome",
+								"onrender",
+								"com"
 							],
 							"path": [
 								"api",
@@ -259,11 +266,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://qlikserver.dev/api/messages/getMyMessage",
+							"raw": "https://qlik-palindrome.onrender.com/api/messages/getMyMessage",
 							"protocol": "https",
 							"host": [
-								"qlikserver",
-								"dev"
+								"qlik-palindrome",
+								"onrender",
+								"com"
 							],
 							"path": [
 								"api",
@@ -278,7 +286,7 @@
 								},
 								{
 									"key": "page",
-									"value": "2",
+									"value": "3",
 									"disabled": true
 								},
 								{
@@ -288,7 +296,7 @@
 								},
 								{
 									"key": "id",
-									"value": "67edade6412b8301276cc7c5",
+									"value": "67eea95e89fe37a1f7855431",
 									"disabled": true
 								}
 							]
@@ -302,11 +310,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://qlikserver.dev/api/messages/getAllMssages",
+							"raw": "https://qlik-palindrome.onrender.com/api/messages/getAllMssages",
 							"protocol": "https",
 							"host": [
-								"qlikserver",
-								"dev"
+								"qlik-palindrome",
+								"onrender",
+								"com"
 							],
 							"path": [
 								"api",
@@ -316,7 +325,7 @@
 							"query": [
 								{
 									"key": "userId",
-									"value": "67ec266362a9e7b3936238c8",
+									"value": "67eea96589fe37a1f7855434",
 									"disabled": true
 								},
 								{
@@ -346,7 +355,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id\" :\"67edd2005238138d97550cde\"\r\n}",
+							"raw": "{\r\n    \"id\" :\"67eeb0557504f38e9395da3e\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -354,11 +363,12 @@
 							}
 						},
 						"url": {
-							"raw": "https://qlikserver.dev/api/messages/deleteMessage",
+							"raw": "https://qlik-palindrome.onrender.com/api/messages/deleteMessage",
 							"protocol": "https",
 							"host": [
-								"qlikserver",
-								"dev"
+								"qlik-palindrome",
+								"onrender",
+								"com"
 							],
 							"path": [
 								"api",
@@ -376,7 +386,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id\" :\"67ed5c397df82ce6ac2bd059\",\r\n    \"content\" : \"abc\"\r\n}",
+							"raw": "{\r\n    \"id\" :\"67eeb0557504f38e9395da3e\",\r\n    \"content\" : \"modify\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -384,11 +394,12 @@
 							}
 						},
 						"url": {
-							"raw": "https://qlikserver.dev/api/messages/updateMessage",
+							"raw": "https://qlik-palindrome.onrender.com/api/messages/updateMessage",
 							"protocol": "https",
 							"host": [
-								"qlikserver",
-								"dev"
+								"qlik-palindrome",
+								"onrender",
+								"com"
 							],
 							"path": [
 								"api",
@@ -410,11 +421,12 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "https://qlikserver.dev/api/dev/restDB",
+							"raw": "https://qlik-palindrome.onrender.com/api/dev/restDB",
 							"protocol": "https",
 							"host": [
-								"qlikserver",
-								"dev"
+								"qlik-palindrome",
+								"onrender",
+								"com"
 							],
 							"path": [
 								"api",
@@ -431,11 +443,12 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "https://qlikserver.dev/api/dev/restDBWithUsers",
+							"raw": "https://qlik-palindrome.onrender.com/api/dev/restDBWithUsers",
 							"protocol": "https",
 							"host": [
-								"qlikserver",
-								"dev"
+								"qlik-palindrome",
+								"onrender",
+								"com"
 							],
 							"path": [
 								"api",
@@ -452,11 +465,12 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "https://qlikserver.dev/api/dev/restDBWithUsersAndMessages",
+							"raw": "https://qlik-palindrome.onrender.com/api/dev/restDBWithUsersAndMessages",
 							"protocol": "https",
 							"host": [
-								"qlikserver",
-								"dev"
+								"qlik-palindrome",
+								"onrender",
+								"com"
 							],
 							"path": [
 								"api",
