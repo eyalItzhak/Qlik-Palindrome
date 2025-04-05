@@ -1,0 +1,487 @@
+{
+	"info": {
+		"_postman_id": "fd507615-3985-482a-b1e9-8b00642b595b",
+		"name": "deploy qlik server",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24976132",
+		"_collection_link": "https://planetary-equinox-396146.postman.co/workspace/Qlik-Server-API~48e01c3a-5f7b-4388-a71b-86a5dd5665e3/collection/24976132-fd507615-3985-482a-b1e9-8b00642b595b?action=share&source=collection_link&creator=24976132"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "SignUp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"email\": \"user1@gmail.com\",\r\n     \"password\" : \"abc123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://qlik-palindrome.onrender.com/api/users/signup",
+							"protocol": "https",
+							"host": [
+								"qlik-palindrome",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"users",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LogIn",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"email\": \"user1@gmail.com\",\r\n     \"password\" : \"abc123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://qlik-palindrome.onrender.com/api/users/signin",
+							"protocol": "https",
+							"host": [
+								"qlik-palindrome",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"users",
+								"signin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Findusers",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://qlik-palindrome.onrender.com/api/users/getUsersByFilter",
+							"protocol": "https",
+							"host": [
+								"qlik-palindrome",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"users",
+								"getUsersByFilter"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "user2@gmail.com",
+									"disabled": true
+								},
+								{
+									"key": "permission",
+									"value": "ADMIN",
+									"disabled": true
+								},
+								{
+									"key": "id",
+									"value": "67eea96589fe37a1f7855434",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "3",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "2",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "currentuser",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://qlik-palindrome.onrender.com/api/users/currentuser",
+							"protocol": "https",
+							"host": [
+								"qlik-palindrome",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"users",
+								"currentuser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logOut",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://qlik-palindrome.onrender.com/api/users/logout",
+							"protocol": "https",
+							"host": [
+								"qlik-palindrome",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"users",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteUser",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"67ed6fa09386fcd007b0fdc2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://qlik-palindrome.onrender.com/api/users/deleteUser",
+							"protocol": "https",
+							"host": [
+								"qlik-palindrome",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"users",
+								"deleteUser"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Message",
+			"item": [
+				{
+					"name": "New MSG",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"messageContent\" : \"aaabbbaaa\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://qlik-palindrome.onrender.com/api/messages/postMessage",
+							"protocol": "https",
+							"host": [
+								"qlik-palindrome",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"messages",
+								"postMessage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get MSG",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://qlik-palindrome.onrender.com/api/messages/getMyMessage",
+							"protocol": "https",
+							"host": [
+								"qlik-palindrome",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"messages",
+								"getMyMessage"
+							],
+							"query": [
+								{
+									"key": "isPalindrome",
+									"value": "true",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "3",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "id",
+									"value": "67eea95e89fe37a1f7855431",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Msg(Admin)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://qlik-palindrome.onrender.com/api/messages/getAllMssages",
+							"protocol": "https",
+							"host": [
+								"qlik-palindrome",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"messages",
+								"getAllMssages"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "67eea96589fe37a1f7855434",
+									"disabled": true
+								},
+								{
+									"key": "isPalindrome",
+									"value": "true",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "abca@abc.com",
+									"disabled": true
+								},
+								{
+									"key": "content",
+									"value": "abbaa",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteMsg",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" :\"67eeb0557504f38e9395da3e\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://qlik-palindrome.onrender.com/api/messages/deleteMessage",
+							"protocol": "https",
+							"host": [
+								"qlik-palindrome",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"messages",
+								"deleteMessage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "modfiy msg",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" :\"67eeb0557504f38e9395da3e\",\r\n    \"content\" : \"modify\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://qlik-palindrome.onrender.com/api/messages/updateMessage",
+							"protocol": "https",
+							"host": [
+								"qlik-palindrome",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"messages",
+								"updateMessage"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Dev",
+			"item": [
+				{
+					"name": "rest db",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://qlik-palindrome.onrender.com/api/dev/restDB",
+							"protocol": "https",
+							"host": [
+								"qlik-palindrome",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"dev",
+								"restDB"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "rest db + add users",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://qlik-palindrome.onrender.com/api/dev/restDBWithUsers",
+							"protocol": "https",
+							"host": [
+								"qlik-palindrome",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"dev",
+								"restDBWithUsers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "rest db + add users +add msg",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://qlik-palindrome.onrender.com/api/dev/restDBWithUsersAndMessages",
+							"protocol": "https",
+							"host": [
+								"qlik-palindrome",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"dev",
+								"restDBWithUsersAndMessages"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
